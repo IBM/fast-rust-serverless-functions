@@ -1,0 +1,21 @@
+[package]
+name = "serveless-rust-tutorial"
+version = "1.0.0"
+description = "Sample serverless functions for working with IBM Cloudant"
+authors = ["Vanderlei Munhoz Pereira Filho <vnderlev@protonmail.ch>"]
+edition = "2018"
+
+[[bin]]
+name = "insert"
+path = "src/insert.rs"
+
+[[bin]]
+name = "fetch_all"
+path = "src/fetch_all.rs"
+
+[dependencies]
+serde = { version="^1.0.110", features=["derive"] }
+serde_json = "^1.0.55"
+exitcode = "^1.1.2"
+ureq = { version="2.0.2", features=["json"] }
+base64 = "^0.13.0"
