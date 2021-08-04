@@ -15,4 +15,6 @@ COPY --from=builder \
 	/action/exec
 	# If the --release option is enabled for cargo, make sure to change
 	# debug to release in the source directory of the COPY instruction.
+	
+# --- CMD
 CMD ["/bin/bash", "-c", "cd actionProxy && python -u actionproxy.py"]
